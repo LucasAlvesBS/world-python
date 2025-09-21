@@ -1,5 +1,6 @@
 from colorama import Fore, init
 from random import randint
+from time import sleep
 
 init(autoreset=True)
 
@@ -23,6 +24,9 @@ print(separator)
 user = int(input('Número do símbolo: '))
 pc = randint(1, 3)
 
+# items = ('Pedra', 'Papel', 'Tesoura')
+# print(items[pc]) -> Forma mais eficiente
+
 if user < 1 or user > 3:
     print('Este não é um símbolo válido. Tente novamente!')
 else:
@@ -45,8 +49,17 @@ else:
         user_symbol = scissors
 
     print(separator)
+    time = 1
+    print('JO')
+    sleep(time)
+    print('KEN')
+    sleep(time)
+    print('PÔ!!!')
+    print(separator)
+
     print(f'Escolha da máquina: {pc_symbol}')
     print(f'Escolha do usuário: {user_symbol}')
+    print(separator)
 
     victory_message = green + 'GANHOU! Você é muito bom nesse jogo!'
     defeat_message = red + 'VOCÊ PERDEU! HAHAHAHAHAHA'

@@ -1,5 +1,5 @@
-weight = float(input('Digite seu peso: '))
-height = float(input('Digite sua altura: '))
+weight = float(input('Digite seu peso (Kg): '))
+height = float(input('Digite sua altura (cm): '))
 
 imc = (weight / (height ** 2)) * 10000
 print(f'\nIMC: {imc:.2f}')
@@ -14,4 +14,3 @@ elif 30 <= imc < 40:
     print('Obesidade!')
 else:
     print('Obesidade mórbida!')
-

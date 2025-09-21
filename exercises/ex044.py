@@ -8,7 +8,7 @@ print(separator * 3)
 
 payment_condition = int(input('Qual a condição de pagamento desejada? '))
 
-if payment_condition < 0 or payment_condition > 5:
+if payment_condition <= 0 or payment_condition >= 5:
     print('Condição de pagamento inválida. Tente novamente!')
 else:
     if payment_condition == 1:
@@ -19,9 +19,11 @@ else:
         print('\n5% de desconto!')
     elif payment_condition == 3:
         price_to_pay = price
-        print('\nSem desconto!')
+        installments = price_to_pay / 2
+        print(f'\nSem desconto! Você pode parcelar em 2x de R${installments:.2f}!')
     else:
         price_to_pay = price * (120 / 100)
-        print('\n20% de juros!')
+        numberOfinstallments = int(input('Em quantas parcelas? '))
+        installments = price_to_pay / numberOfinstallments
+        print(f'\n20% de juros! Você pode parcelar em {numberOfinstallments}x de R${installments:.2f}!')
     print(f'O total a ser pago será de R${price_to_pay:.2f}!')
-
