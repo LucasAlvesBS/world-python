@@ -4,6 +4,6 @@ separator = '-' * 20
 print(separator)
 
 for number in range(1, 11):
-    print(f'{multiplicationTable} x {number} = {multiplicationTable * number}')
+    print(f'{multiplicationTable} x {number:2} = {multiplicationTable * number}')
 
 print(separator)

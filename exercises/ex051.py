@@ -12,4 +12,4 @@ print(separator)
 print('Os primeiros dez números dessa progressão aritmética são:\n')
 
 for number in range(firstTerm, generalTerm + 1, ratio):
-    print(number)
+    print(number, end=' ')
