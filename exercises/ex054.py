@@ -19,8 +19,6 @@ for num in range(0, 7):
 
     if year < minimum_year or year > current_year:
         invalid_list.append(year)
-    else:
-        list_of_years.append(year)
 
     if age >= reference_age:
         adulthood += 1

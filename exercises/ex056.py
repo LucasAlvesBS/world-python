@@ -17,7 +17,7 @@ for num in range(0, number_of_people):
     print(separator)
     print(f'Pessoa {num + 1}\n')
 
-    name = str(input('Digite o nome: '))
+    name = str(input('Digite o nome: ')).strip()
     age = int(input('Digite a idade: '))
     gender = str(input('Digite o sexo (M/F): ')).strip().upper()[0]
 
