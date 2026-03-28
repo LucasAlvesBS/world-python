@@ -11,13 +11,17 @@ pcNum = 15
 playerNum = 20
 count = 0
 
+pcNum = randint(0, 10)
+
 while playerNum != pcNum:
-  pcNum = randint(0, 10)
   playerNum = int(input('Digite um número de 0 a 10: '))
   count += 1
   
-  print(f'\nNúmero selecionado pelo PC: {pcNum}')
-  print(f'Número selecionado pelo Jogador: {playerNum}')
-  print(hyphenSeparator)
+  if (playerNum < pcNum):
+    print('\nMais... Tente novamente!')
+    print(hyphenSeparator)
+  elif (playerNum > pcNum):
+    print('\nMenos... Tente novamente!')
+    print(hyphenSeparator)
   
 print(f'\nPARABÉNS! Depois de {count} tentativa(s), você advinhou o número escolhido pelo PC.')
