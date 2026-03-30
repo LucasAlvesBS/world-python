@@ -12,7 +12,7 @@ count = 0
 
 print('\n0 1', end=' ')
 
-while count != numberOfTerms:
+while count != (numberOfTerms - 2):
   supportTerm = currentTerm
   currentTerm += previousTerm
   previousTerm = supportTerm 

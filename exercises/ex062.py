@@ -9,22 +9,22 @@ reason = int(input('Digite o valor da razão: '))
 print(end='\n')
 
 termLimit = 10
-termCounting = 1
+termCounting = incrementalTermLimit = 1
 userResponse = ''
 
 list_of_terms = [str(term)]
 
-while userResponse != 'F':
+while incrementalTermLimit != 0:
   term += reason
   termCounting += 1
   list_of_terms.append(str(term))
   
   if (termCounting == termLimit):
     print('-> ' + ' '.join(list_of_terms))
-    userResponse = str(input('\nDeseja continuar? [S/F] ')).strip().upper()
+     
+    incrementalTermLimit = int(input('Gostaria de ver mais quantos termos? '))
+    termLimit += incrementalTermLimit
+    print(end='\n')
     
-    if (userResponse == 'S'):
-      incrementalTermLimit = int(input('Gostaria de ver mais quantos termos? '))
-      termLimit += incrementalTermLimit
-      print(end='\n')
-  
+print(separator)
+print(f'Progressão Aritmética finalizada com {termLimit} termos!')
