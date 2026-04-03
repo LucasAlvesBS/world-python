@@ -42,4 +42,3 @@ print(f'\nO total da compra foi de R${totalPrice:.2f}')
 print(f'A quantidade de produtos custando mais de R$1000.00 é de {totalProductsAbove1000}')
 print(f'O produto mais barato foi {cheapestProductName} que custa R${cheapestProductPrice:.2f}')
   
-  

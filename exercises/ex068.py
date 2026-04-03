@@ -12,7 +12,7 @@ victory = 0
 while True:
   print(macroSeparator)
   num = int(input('Digite um valor: '))
-  choice = 'A'
+  choice = ' '
   
   while choice not in 'PI':
     choice = str(input('Par ou Ímpar? [P/I] ')).strip().upper()[0]
@@ -23,29 +23,31 @@ while True:
   print(microSeparator)
   print(f'Você jogou {num} e o computador {pc}, totalizando {result}.', end=' ')
   
-  if result % 2 == 0 and choice == 'P':
-    victory += 1
+  won = False
+
+  if result % 2 == 0:
     print('DEU PAR!')
     
-  elif result % 2 == 1 and choice == 'I': 
-    victory += 1
+    if choice == 'P':
+      won = True
+      victory += 1
+    
+  if result % 2 == 1:
     print('DEU ÍMPAR!')
     
-  else:
-    print(end='\n')
-    print(microSeparator)
+    if choice == 'I':
+      won = True 
+      victory += 1
+      
+  print(microSeparator)
+    
+  if won == False:
     print('Você PERDEU!')
     break
   
-  print(microSeparator)
   print('Você VENCEU!')
   print('Vamos jogar novamente...')
 
 print(macroSeparator)
 print(f'GAME OVER! Você venceu {victory} vez(es).')
-  
-  
-    
-  
-  
   
