@@ -4,10 +4,13 @@ print(separator)
 print(' ' * 20 + 'BANCO CEV')
 print(separator)
 
-count = currentValue = 0
+count = 0
 
-while currentValue <= 0:
+while True:
   currentValue = int(input('Que valor você quer sacar? R$'))
+  
+  if currentValue > 0:
+    break
 
 while True:
   if count == 0:
