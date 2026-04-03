@@ -26,7 +26,7 @@ while True:
     cheapestProductName = productName 
     
   count += 1  
-  choice = 'A' 
+  choice = ' ' 
   print(end='\n')
   
   while choice not in 'SN':

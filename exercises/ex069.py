@@ -8,7 +8,7 @@ while True:
   print(separator)
   
   age = int(input('Idade: '))
-  gender = choice = 'A'
+  gender = choice = ' '
   
   while gender not in 'MF':
     gender = str(input('Sexo [M/F]: ')).strip().upper()[0]
