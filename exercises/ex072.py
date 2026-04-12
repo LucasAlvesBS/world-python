@@ -26,9 +26,17 @@ while True:
   userNumber = int(input('Digite um número inteiro entre 0 e 20: '))
   
   if userNumber >= 0 and userNumber <= 20:
-    break
-  
-  print('Número inválido, tente novamente!\n')
-  
-print('-' * 50)
-print(f'Você digitou o número {numbersinWords[userNumber]}!')
+    print(f'Você digitou o número {numbersinWords[userNumber]}!')
+    print(end='\n')
+    
+    userResponse = ' '
+    
+    while userResponse not in 'SN':
+      userResponse = str(input('Você quer continuar? [S/N] ').strip().upper()[0])
+      
+    if userResponse == 'N':
+      break
+    
+    print('-' * 50)
+  else:
+    print('Número inválido, tente novamente!\n')

@@ -21,12 +21,19 @@ brazilianChampionshipTable = (
   'Remo'
 )
 
-separator = '=' * 70
-print(separator)
+equalSeparator = '=' * 70
+print(equalSeparator)
 print(' ' * 7 + 'DADOS SOBRE O CAMPEONATO BRASILEIRO DE 2026 - 9ª RODADA')
-print(separator)
+print(equalSeparator)
 
+hyphenSeparator = '-' * 70
+
+print(f'Ranking de times: {', '.join(brazilianChampionshipTable)}')
+print(hyphenSeparator)
 print(f'Os 5 primeiros colocados são: {', '.join(brazilianChampionshipTable[:5])}')
-print(f'\nOs 4 últimoos colocados da tabela são: {', '.join(brazilianChampionshipTable[16:])}')
-print(f'\nTimes listados na ordem alfabética: {', '.join(sorted(brazilianChampionshipTable))}')
-print(f'\nO time da Chapecoense está na {brazilianChampionshipTable.index('Chapecoense') + 1}ª posição')
+print(hyphenSeparator)
+print(f'Os 4 últimos colocados da tabela são: {', '.join(brazilianChampionshipTable[16:])}')
+print(hyphenSeparator)
+print(f'Times listados na ordem alfabética: {', '.join(sorted(brazilianChampionshipTable))}')
+print(hyphenSeparator)
+print(f'O time da Chapecoense está na {brazilianChampionshipTable.index('Chapecoense') + 1}ª posição')
