@@ -1,7 +1,7 @@
 separator = '-' * 30
 
 print(separator)
-print(' ' * 5 + 'LISTAGEM DE PREÇOS')
+print(f'{"LISTAGEM DE PREÇOS":^29}')
 print(separator)
 
 products = (
@@ -16,11 +16,10 @@ products = (
   'Livro', 34.9,
 )
 
-for index, product in enumerate(products):
-  if index % 2 == 1:
-    print(f'{product:6.2f}')
-  
+for index, product in enumerate(products):    
   if index % 2 == 0:
     print(f'{product:.<20}', end='R$ ')
+  else:
+    print(f'{product:6.2f}')
 
 print(separator)
